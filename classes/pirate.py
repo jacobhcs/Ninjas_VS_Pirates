@@ -2,7 +2,7 @@ class Pirate:
 
     def __init__( self , name ):
         self.name = name
-        self.strength = 45
+        self.strength = 65
         self.speed = 3
         self.health = 100
 
@@ -11,9 +11,13 @@ class Pirate:
 
     def attack( self , ninja ):
         if self.health <= 0:
-            print(f"{self.name} Can't attack. You're dead.")
+            print(f"{self.name} already lost the fight. Can't fight back")
             return self
         
+        if ninja.health <= 0:
+            print(f'{ninja.name}: "Stop attacking me I already lost."')
+            return self
+
         ninja.health = ninja.health - self.strength
         if ninja.health > 0:
             print(f"{self.name} attacked {ninja.name} for {self.strength} damage. {ninja.name}'s remaining health is {ninja.health}")
