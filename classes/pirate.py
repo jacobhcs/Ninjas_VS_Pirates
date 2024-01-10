@@ -16,7 +16,8 @@ class Pirate:
         
         ninja.health = ninja.health - self.strength
         if ninja.health > 0:
-            print(f"You attacked the pirate. Pirates remaining health is {ninja.health}")
+            print(f"{self.name} attacked {ninja.name}. {ninja.name}'s remaining health is {ninja.health}")
+            return self
         elif ninja.health <= 0:
-            print(f"The pirates health is {ninja.health}. You Win")
-        return self
+            print(f"{self.name} attacked {ninja.name}. {ninja.name}'s remaining health is {ninja.health}. {self.name} Wins!")
+            return self
