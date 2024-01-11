@@ -2,7 +2,7 @@ class Ninja:
 
     def __init__( self , name ):
         self.name = name
-        self.strength = 50
+        self.strength = 10
         self.speed = 5
         self.health = 100
     

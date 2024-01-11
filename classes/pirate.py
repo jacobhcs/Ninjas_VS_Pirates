@@ -2,7 +2,7 @@ class Pirate:
 
     def __init__( self , name ):
         self.name = name
-        self.strength = 65
+        self.strength = 25
         self.speed = 3
         self.health = 100
 
